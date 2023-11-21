@@ -1,3 +1,9 @@
 Cleiton: Beneficio: 132.0, Imposto: 264.0
+Salario Bruto: 1320.0 Salario Liquido: 1188.0
+
 Douglas: Beneficio: 264.0, Imposto: 528.0
+Salario Bruto: 2640.0 Salario Liquido: 2376.0
+
 Laercio: Beneficio: 528.0, Imposto: 1056.0
+Salario Bruto: 5280.0 Salario Liquido: 4752.0
+
