@@ -15,7 +15,7 @@ calculoImposto funcionario = salarioFunc funcionario * 0.2 -- 20% do salario com
 
 -- processando uma lista de funcionarios
 processaFunc :: [Funcionario] -> [(Double, Double)]
-processaFunc funcionarios = map(\func -> (calculoBeneficio func, calculoImposto func)) funcionarios
+processaFunc = map(\func -> (calculoBeneficio func, calculoImposto func))
 
 -- le os dados dos funcionarios
 leFuncionariosDoArquivo :: FilePath -> IO [Funcionario]
@@ -37,6 +37,6 @@ escreveResultado caminhoArquivo resultados =
 -- main
 main :: IO ()
 main = do
-    funcionarios <- lerFuncionariosDoArquivo "funcionarios.txt"
-    let resultados = processarFuncionarios funcionarios
-    escreverResultado "resultados.txt" resultados
+    funcionarios <- leFuncionariosDoArquivo "funcionarios.txt"
+    let resultados = processaFunc funcionarios
+    escreveResultado "resultados.txt" resultados
