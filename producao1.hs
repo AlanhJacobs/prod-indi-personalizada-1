@@ -14,8 +14,8 @@ calculoImposto :: Funcionario -> Double
 calculoImposto funcionario = salarioFunc funcionario * 0.2 -- 20% do salario como imposto
 
 -- processando uma lista de funcionarios
-processaFunc :: [Funcionario] -> [(Double, Double)]
-processaFunc = map(\func -> (calculoBeneficio func, calculoImposto func))
+processaFunc :: [Funcionario] -> [(String, Double, Double)]
+processaFunc = map(\func -> (nomeFunc func, calculoBeneficio func, calculoImposto func))
 
 -- le os dados dos funcionarios
 leFuncionariosDoArquivo :: FilePath -> IO [Funcionario]
@@ -30,9 +30,9 @@ parseFuncionario linha =
     in Funcionario nome (read salario) (read idade)
 
 -- escreve o resultado no arquivo
-escreveResultado :: FilePath -> [(Double, Double)] -> IO ()
+escreveResultado :: FilePath -> [(String, Double, Double)] -> IO ()
 escreveResultado caminhoArquivo resultados =
-    writeFile caminhoArquivo (unlines (map (\(beneficio, imposto) -> "Beneficio: " ++ show beneficio ++ ", Imposto: " ++ show imposto) resultados))
+    writeFile caminhoArquivo (unlines (map (\(nome, beneficio, imposto) -> nome ++ " Beneficio: " ++ show beneficio ++ ", Imposto: " ++ show imposto) resultados))
 
 -- main
 main :: IO ()
