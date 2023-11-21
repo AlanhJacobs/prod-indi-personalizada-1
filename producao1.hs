@@ -32,7 +32,7 @@ parseFuncionario linha =
 -- escreve o resultado no arquivo
 escreveResultado :: FilePath -> [(String, Double, Double)] -> IO ()
 escreveResultado caminhoArquivo resultados =
-    writeFile caminhoArquivo (unlines (map (\(nome, beneficio, imposto) -> nome ++ " Beneficio: " ++ show beneficio ++ ", Imposto: " ++ show imposto) resultados))
+    writeFile caminhoArquivo (unlines (map (\(nome, beneficio, imposto) -> nome ++ ": Beneficio: " ++ show beneficio ++ ", Imposto: " ++ show imposto) resultados))
 
 -- main
 main :: IO ()

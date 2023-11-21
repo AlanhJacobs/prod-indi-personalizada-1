@@ -1,3 +1,3 @@
-Cleiton Beneficio: 132.0, Imposto: 264.0
-Douglas Beneficio: 264.0, Imposto: 528.0
-Laercio Beneficio: 528.0, Imposto: 1056.0
+Cleiton: Beneficio: 132.0, Imposto: 264.0
+Douglas: Beneficio: 264.0, Imposto: 528.0
+Laercio: Beneficio: 528.0, Imposto: 1056.0
